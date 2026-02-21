@@ -1,0 +1,26 @@
+名称: Android CI
+
+开启:
+推送:
+分支: [ "main" ]
+拉取请求:
+分支: [ "main" ]
+
+作业:
+构建:
+
+运行于: ubuntu-latest
+
+步骤:
+    - 使用: actions/checkout@v4
+    - 名称: 设置 JDK 11
+使用: actions/setup-java@v4
+与:
+java版本: '11'
+发行版: 'temurin'
+缓存: gradle
+
+    - 名称: 为 gradlew 授予执行权限
+运行: chmod +x gradlew
+    - 名称: 使用Gradle构建
+      run: ./gradlew build
