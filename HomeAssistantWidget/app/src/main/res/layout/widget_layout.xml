@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:padding="12dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_entity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设备名称"
+        android:textColor="@color/widget_text"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/tv_entity_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/widget_value"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/tv_last_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--:--"
+        android:textColor="@color/widget_text"
+        android:textSize="10sp"
+        android:layout_marginTop="4dp" />
+
+    <ImageButton
+        android:id="@+id/btn_refresh"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_refresh"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/refresh"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>
